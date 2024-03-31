@@ -1,12 +1,18 @@
 
-function callback(world){
-    console.log(`Hello world`) ;
-}
 
 function receivesAFunction(callback){
 return callback();
 }
 
 function returnsANamedFunction(){
-    return receivesAFunction();
+    function Kimani(){
+        console.log("I am named");
+    }
+    return Kimani;
+}
+
+function returnsAnAnonymousFunction(){
+    return function(){
+        console.log("My name is the master");
+    }
 }
